@@ -1,0 +1,159 @@
+/* General Body Styles */
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2018/06/21/13/57/clouds-3488632_1280.jpg'); /* Background image from URL */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: #181010;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Weather Card Styles */
+.weather-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)); /* Gradient background */
+    border-radius: 20px; /* More rounded corners */
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Added background transition */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Prevent overflow of pseudo-elements */
+}
+
+/* Card Hover Effect */
+.weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Adding a decorative element */
+.weather-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Light overlay */
+    border-radius: 20px; /* Match card border radius */
+    z-index: 0; /* Behind the content */
+    transition: background 0.3s; /* Smooth transition */
+}
+
+/* Title Styles */
+.card-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
+    z-index: 1; /* Above the overlay */
+}
+
+/* Subtitle Styles */
+.card-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #dd1c1ccc; /* Slightly transparent for a softer look */
+    z-index: 1; /* Above the overlay */
+}
+
+/* Weather Info Styles */
+.weather-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    transition: color 0.3s;
+    padding: 10px; /* Increased padding for better spacing */
+    border-radius: 5px; /* Rounded corners for info boxes */
+    background: rgba(255, 255, 255, 0.2); /* Light background for emphasis */
+    z-index: 1; /* Above the overlay */
+}
+
+/* Temperature Styles */
+.temp {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: hsl(60, 11%, 2%); /* Bright color for temperature */
+    background: rgba(255, 255, 255, 0.3); /* Light background for emphasis */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1; /* Above the overlay */
+}
+
+/* Additional Info Styles */
+.feels-like, .humidity, .wind-speed {
+    color: hsl(0, 6%, 10%); /* Dark color for other info */
+    background: rgba(255, 255, 255, 0.2); /* Light background for emphasis */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1; /* Above the overlay */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .weather-card {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 2rem;
+    }
+
+    .temp {
+        font-size: 2rem;
+    }
+
+    .card-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .weather-info p {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
+
+
+
+
+
+/* Search Input Field Styles */
+input[type="text"] {
+    width: 250px; /* Set a fixed width */
+    padding: 10px; /* Add padding for better spacing */
+    border: 2px solid #007bff; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    margin-right: 10px; /* Space between input and button */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Change border color on focus */
+input[type="text"]:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Search Button Styles */
+button {
+    padding: 10px 15px; /* Add padding for better spacing */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Change background color on active */
+button:active {
+    background-color: #004494; /* Even darker blue when active */
+}
